@@ -3,71 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Divyesh's World 🌌</title>
+  <title>Divyesh's Homepage</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+    /* Body & Gradient Animation */
     body {
-      background: linear-gradient(135deg, #0f2027, #2c5364, #203a43); /* Blue shades */
-      color: #f1f1f1; /* Silver white */
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 60px;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 15px rgba(255,255,255,0.6);
-      color: #c0c0c0; /* Silver effect */
-    }
-    h2 {
-      font-size: 28px;
-      margin-bottom: 40px;
-      font-weight: 400;
-      color: #dce3f0;
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 30px;
-      font-size: 20px;
-      border-radius: 30px;
-      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(270deg, #0a0a0a, #1a1a1a, #0a0a0a);
+      background-size: 600% 600%;
+      animation: gradientBG 20s ease infinite;
       color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(74,144,226,0.8); /* semi-transparent blue */
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
-    .btn:hover {
-      background: #c0c0c0;
-      color: #2a2a2a;
-      transform: scale(1.05);
+    nav a:hover {
+      text-decoration: underline;
     }
+
+    /* Sections */
+    section {
+      padding: 100px 50px 50px 50px; /* space for navbar */
+      text-align: center;
+      min-height: 100vh;
+    }
+    #about { background-color: rgba(230,240,250,0.2); color:#fff; }
+    #contact { background-color: rgba(204,224,255,0.2); color:#fff; }
+    h2 { color: #00cfff; }
+
+    /* Footer */
     footer {
-      margin-top: 60px;
-      font-size: 14px;
-      opacity: 0.8;
-      color: #bbb;
+      padding: 20px;
+      background-color: rgba(74,144,226,0.8);
+      color: white;
+      text-align: center;
+    }
+
+    /* Floating Solo Leveling Character */
+    .character {
+      position: fixed;
+      bottom: 0;
+      right: 10%;
+      width: 150px;
+      animation: float 3s ease-in-out infinite;
+      z-index: 500;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
     }
   </style>
 </head>
 <body>
-  <h1>🌌 Divyesh's World 🌌</h1>
-  <h2>Shining Silver & Cool Blue Vibes ❄️</h2>
 
-  <a href="#" class="btn">About Me</a>
-  <a href="#" class="btn">My Gallery</a>
-  <a href="#" class="btn">Contact Me</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <footer>Made with 💙 & Silver touch by Divyesh</footer>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm Divyesh 😎</p>
+    <p>Age: 17</p>
+    <p>Profession: Student</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:divyeshpay001@gmail.com">divyeshpay001@gmail.com</a></p>
+  </section>
+
+  <footer>
+    Made by Divyesh
+  </footer>
+
+  <!-- Solo Leveling Character -->
+  <img src="https://i.imgur.com/yourImage.png" class="character" alt="Solo Leveling Character">
+
 </body>
 </html>
